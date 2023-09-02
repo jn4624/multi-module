@@ -2,6 +2,8 @@ package com.dev.multi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * 모듈간 생성 패키지명이 상이하여 Application 구동시
@@ -14,6 +16,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //    scanBasePackages = {"module-api의 패키지 경로", "module-common의 패키지 경로"}
 //)
 @SpringBootApplication
+//@EntityScan("com.dev.multi.domain.Member")
+//@EnableJpaRepositories(basePackages = "com.dev.multi.repositories")
 public class ModuleApiApplication {
 
     public static void main(String[] args) {
