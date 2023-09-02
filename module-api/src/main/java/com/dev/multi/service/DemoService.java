@@ -5,16 +5,23 @@ import com.dev.multi.enums.CodeEnum;
 import com.dev.multi.exception.CustomException;
 import com.dev.multi.repositories.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class DemoService {
+
+    @Value("${profile-name}")
+    private String name;
+
     private final CommonDemoService commonDemoService;
 
     private final MemberRepository memberRepository;
 
     public String save() {
+        System.out.println("name : " + name);
+
         memberRepository.save(Member.builder()
                 .name(Thread.currentThread().getName())
                 .build());

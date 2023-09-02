@@ -25,3 +25,5 @@ public class ModuleApiApplication {
     }
 
 }
+
+// jvm 옵션으로 profile 설정 후 jar 실행 명령어: java -jar -Dspring.profiles.active=beta module-api-0.0.1-SNAPSHOT.jar
