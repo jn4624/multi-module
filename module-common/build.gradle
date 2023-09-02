@@ -37,3 +37,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.bootJar {
+	enabled = false
+}
+tasks.jar {
+	enabled = true
+}
+
+// 빌드 명령어 : ./gradlew clean :module-api:buildNeeded --stacktrace --info --refresh-dependencies -x test
+// 클린 명령어 : ./gradlew clean
